@@ -4,9 +4,8 @@ ENV VIRTUAL_ENV=/opt/venv
 RUN python -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
-RUN poetry self add poetry-plugin-export
-
 RUN pip install --upgrade pip && pip install poetry
+RUN poetry self add poetry-plugin-export
 COPY poetry.lock pyproject.toml ./
 RUN poetry export -f requirements.txt --output requirements.txt --without-hashes \
     && pip install --no-cache-dir -r requirements.txt
