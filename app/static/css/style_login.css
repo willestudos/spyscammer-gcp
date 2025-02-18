@@ -1,0 +1,104 @@
+body {
+    background-color: #000131;
+    color: #ffffff;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../imagens/background2.png");
+    background-repeat: no-repeat;
+    background-size: 2680px;
+    backface-visibility: 10%;
+  }
+
+  .login-card {
+    background-color: #010023;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 70%;
+  }
+
+  .ch3-scammer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ch3-scammer-logo i {
+    font-size: 2.5rem;
+    color: red;
+  }
+
+  .ch3-scammer-logo span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+  }
+
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-group input {
+    background-color: #ffffff;
+    color: #1f1c1f  !important;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .btn-login {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .btn-login:hover {
+    background-color: #c82333;
+  }
+
+  .forgot-password {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .forgot-password a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .forgot-password a:hover {
+    text-decoration: underline;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+  }
+
+  .footer i {
+    margin-right: 5px;
+  }
+
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }

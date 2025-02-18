@@ -1,0 +1,60 @@
+{% extends '_base.html' %}
+
+{% block style%}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqk1w20JHDnEqllG8RH+7u" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="../../static/css/style_login.css"/>
+{% endblock%}
+
+{% block container%}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 login-card">
+        <div class="scammer_logo">
+          <i class="fa-solid fa-eye"></i>
+          <span>SPY-Scammer</span>
+        </div>
+        <h2 class="text-center mb-4">Cadastrar</h2>
+        <form action="/register" method="post" autocomplete="on">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input name="name" type="text" class="form-control" id="name" placeholder="Digite seu nome" required autofocus>
+            </div>
+          <div class="form-group">
+                <label for="username">Username</label>
+                <input name="username" type="text" class="form-control" id="username" placeholder="Digite seu username" required autofocus>
+            </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input name="email" type="email" class="form-control" id="email" placeholder="Digite seu email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <input name="password" type="password" class="form-control" id="password" placeholder="Digite sua senha" required maxlength="15" minlength="6">
+          </div>
+          <button type="submit" class="btn btn-login">CADASTRAR</button>
+          <div style="height: 50px; padding-top: 15px;">
+            {% if alert_message %}
+            {% if alert_message == "Existe um membro cadastrado com este e-mail!" %}
+                <script src="../../static/js/messagem_alert_sleep.js"></script>
+                <div id="alertMessage" class="alert alert-danger" role="alert">
+                    {{ alert_message }}
+                </div>
+            {% else %}
+                <script src="../../static/js/message_alert_register.js"></script>
+                <div id="alertMessage" class="alert alert-success" role="alert">
+                    {{ alert_message }}
+                </div>
+            {% endif %}
+        {% endif %}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block script%}
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock%}

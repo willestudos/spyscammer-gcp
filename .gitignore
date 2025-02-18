@@ -1,0 +1,36 @@
+# PyCharm
+.idea/
+*.iml
+workspace.xml
+
+# VS Code
+.vscode/
+.DS_Store
+.gitkeep
+
+# Virtual Environments
+venv/
+env/
+.venv/
+
+# Build Artifacts
+*.egg
+*.pyc
+__pycache__/
+*.so
+*.dll
+*.pyd
+
+# Testing
+*.egg-info
+dist/
+build/
+.pytest_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Other
+*.log
+*.tmp
+*~

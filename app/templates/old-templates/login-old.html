@@ -1,0 +1,58 @@
+{% extends '_base.html' %}
+{% block style %}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqk1w20JHDnEqllG8RH+7u" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="../../static/css/style_login.css"/>
+{% endblock %}
+
+{% block container %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 login-card">
+        <div class="scammer_logo">
+          <span>SPY-Scammer</span>
+        </div>
+        <h2 class="text-center mb-4">Entrar</h2>
+        <form action="/login" method="post" autocomplete="on">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input name="email" type="email" class="form-control" id="email" placeholder="Digite seu email">
+          </div>
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <input name="password" type="password" class="form-control" id="password" placeholder="Digite sua senha">
+          </div>
+          <button type="submit" class="btn btn-login">ENTRAR</button>
+        </form>
+        <div class="forgot-password">
+          <a href="{{ '/page/nubank' }}">nubank</a>
+        </div>
+        <div class="forgot-password">
+          <a href="{{ '/forgot_password' }}">Esqueci minha senha</a>
+        </div>
+        <div class="footer">
+          <div class="forgot-password">
+            <a href="{{ '/register' }}">CADASTRAR</a>
+          </div>
+          <div>
+            <a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a>
+          </div>
+        </div>
+          <div style="height: 50px;">
+            {% if alert_message %}
+                    <div id="alertMessage" class="alert alert-danger" role="alert">
+                        {{ alert_message }}
+                    </div>
+                {% endif %}
+          </div>
+      </div>
+    </div>
+  </div>
+ {% endblock %}
+ 
+ {% block script %}
+  <script src="../../static/js/messagem_alert_sleep.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  {% endblock %}

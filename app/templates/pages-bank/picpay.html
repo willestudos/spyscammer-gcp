@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PicPay</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: solid 1px
+            
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745; /* PicPay green */
+        }
+
+        .logo img {
+            width: 90px;
+            color: #28a745;
+            margin-left: 5px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .cta-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .cta-buttons {
+                display: block;
+                text-align: center;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+        }
+
+        .mobile-menu {
+            display: none;
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            padding: 20px;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu nav {
+            display: block;
+            margin-top: 20px;
+            flex-direction: column;
+        }
+
+        .mobile-menu nav a {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .mobile-menu nav a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu .cta-buttons {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../../static/imagens/picpay-1.png">
+        </div>
+        <nav>
+            <div class="dropdown">
+                <a href="#">Para você <span>▼</span></a>
+                <div class="dropdown-content">
+                    <a href="#">Opção 1</a>
+                    <a href="#">Opção 2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Para seu Negócio <span>▼</span></a>
+                <div class="dropdown-content">
+                    <a href="#">Opção 1</a>
+                    <a href="#">Opção 2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Sobre o PicPay <span>▼</span></a>
+                <div class="dropdown-content">
+                    <a href="#">Opção 1</a>
+                    <a href="#">Opção 2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Central de Ajuda <span>▼</span></a>
+                <div class="dropdown-content">
+                    <a href="#">Opção 1</a>
+                    <a href="#">Opção 2</a>
+                </div>
+            </div>
+            <a href="#">Blog</a>
+        </nav>
+        <div class="cta-buttons">
+            <a href="#">Área do cliente</a>
+            <a href="#" class="cta-button">Cadastre-se</a>
+        </div>
+        <div class="mobile-menu">
+            <span class="mobile-menu-close" onclick="closeMobileMenu()">×</span>
+            <nav>
+                <a href="#">Para você</a>
+                <a href="#">Para seu Negócio</a>
+                <a href="#">Sobre o PicPay</a>
+                <a href="#">Central de Ajuda</a>
+                <a href="#">Blog</a>
+            </nav>
+            <div class="cta-buttons">
+                <a href="#" class="cta-button" style="text-decoration:none"><span style="color: forestgreen; text-decoration:none">Área do cliente</span></a>
+                <a href="#" class="cta-button">Cadastre-se</a>
+            </div>
+        </div>
+    </header>
+
+</body>
+</html>

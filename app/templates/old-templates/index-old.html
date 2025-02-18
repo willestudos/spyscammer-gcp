@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+{% block style %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../static/css/style_home.css"/>
+{% endblock %}
+
+{% block container %}
+    <a href="home.html">
+        <img src="../../static/imagens/logo_branco.png" alt="Imagem de espionagem digital">
+    </a>
+    <div class="container">
+        <h1>INVESTIGUE GOLPISTAS SEM SER DESCOBERTO.</h1>
+        <p>O Scammer Spy é uma ferramenta criada com o objetivo de desmascarar golpistas, localização e imagem para descobrir quem está do outro lado da tela.</p>
+        <a href="{{ '/login' }}" class="btn btn-primary">ENTRAR</a>
+    </div>
+{% endblock %}

